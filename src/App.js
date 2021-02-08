@@ -1,18 +1,13 @@
 import {useEffect} from 'react';
 import './App.css';
+import Display from "./components/display";
 
 function App() {
-  useEffect(() => {
-   async function ApiCaller(){
-      let api=await fetch("api/users");
-      let data=await api.json();
-               console.log("Data : ",data);
-    }
-    ApiCaller();
-  }, [])
+ 
   return (
      <>
      <h1>Hello</h1>
+     <Display/>
      </>
     );
 }
