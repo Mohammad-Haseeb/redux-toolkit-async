@@ -1,6 +1,7 @@
 import React from 'react';
 import {  useSelector,useDispatch} from 'react-redux';
 import {display} from './../Store/reducer';
+import { fetchUserById } from "./../Store/reducer";
  
 export default function Display(){
     const  dispatch = useDispatch();
@@ -19,6 +20,10 @@ export default function Display(){
                 "title": "Book 4",
                 "author": "Author 4"
             }))}}>Increment Array of Data</button>
+
+            <button onClick={()=>{
+                dispatch(fetchUserById());
+            }}>Increment from Server</button>
           </>
       );
 }
