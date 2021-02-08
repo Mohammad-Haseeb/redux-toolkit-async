@@ -11,6 +11,7 @@ let valueslice=createSlice({
            ]
     },
     reducers:{
+        
         display:(state,action)=>{state.value.push(action.payload)}
     }
 })
